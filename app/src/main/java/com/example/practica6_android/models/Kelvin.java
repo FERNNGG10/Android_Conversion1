@@ -9,7 +9,7 @@ public class Kelvin extends Grado{
     }
     public Kelvin parse(Farenheit F)
     {
-        return new Kelvin(((F.getValor()-32)/18)+273.15);
+        return new Kelvin(((F.getValor() - 32) * 5/9) + 273.15);
     }
 
     public Kelvin parse(Celcius C)

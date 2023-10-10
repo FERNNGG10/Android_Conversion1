@@ -13,6 +13,6 @@ public class Farenheit extends Grado{
 
     public Farenheit parse(Kelvin k)
     {
-        return new Farenheit(((k.getValor()-273.15)*18)+32);
+        return new Farenheit(((k.getValor() - 273.15) * 9/5) + 32);
     }
 }

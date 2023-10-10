@@ -76,30 +76,60 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 double valor = Double.parseDouble(texto);
                 Farenheit farenheit = new Farenheit(valor);
                 Celcius celcius = new Celcius(valor);
-                Celcius celciusafaren= celcius.parse(farenheit);
+                Celcius farencelcius= celcius.parse(farenheit);
 
-                resultado.setText(""+celciusafaren.getValor());
-            }
-            else if(seleccion1.equals("Celsius")&&seleccion2.equals("Kelvin"))
-            {
-
-            }
-            else if(seleccion1.equals("Farenheit")&&seleccion2.equals("Celsius"))
-            {
-
+                resultado.setText(""+farencelcius.getValor());
             }
             else if(seleccion1.equals("Farenheit")&&seleccion2.equals("Kelvin"))
             {
+                double valor = Double.parseDouble(texto);
+                Farenheit farenheit = new Farenheit(valor);
+                Kelvin kelvin = new Kelvin(valor);
+                Kelvin farenkelvin= kelvin.parse(farenheit);
 
+                resultado.setText(""+farenkelvin.getValor());
+            }
+            else if(seleccion1.equals("Celsius")&&seleccion2.equals("Farenheit"))
+            {
+                double valor = Double.parseDouble(texto);
+                Farenheit farenheit = new Farenheit(valor);
+                Celcius celcius = new Celcius(valor);
+                Farenheit celciusfaren= farenheit.parse(celcius);
+
+                resultado.setText(""+celciusfaren.getValor());
+            }
+            else if(seleccion1.equals("Celsius")&&seleccion2.equals("Kelvin"))
+            {
+                double valor = Double.parseDouble(texto);
+                Celcius celcius = new Celcius(valor);
+                Kelvin kelvin = new Kelvin(valor);
+                Kelvin celciuskel= kelvin.parse(celcius);
+
+                resultado.setText(""+celciuskel.getValor());
             }
             else if(seleccion1.equals("Kelvin")&&seleccion2.equals("Farenheit"))
             {
 
+                double valor = Double.parseDouble(texto);
+                Kelvin kelvin = new Kelvin(valor);
+                Farenheit farenheit = new Farenheit(valor);
+                Farenheit kelvinfaren= farenheit.parse(kelvin);
+
+                resultado.setText(""+kelvinfaren.getValor());
             }
+
             else if(seleccion1.equals("Kelvin")&&seleccion2.equals("Celsius"))
             {
 
+                double valor = Double.parseDouble(texto);
+                Kelvin kelvin = new Kelvin(valor);
+                Celcius celcius = new Celcius(valor);
+                Celcius kelvincelcius= celcius.parse(kelvin);
+
+                resultado.setText(""+kelvincelcius.getValor());
             }
+
+
         }
     }
 }
