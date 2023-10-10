@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Practica6_Android</string>
+    <string-array name="tipo">
+
+        <item>Celsius</item>
+        <item>Farenheit</item>
+        <item>Kelvin</item>
+
+    </string-array>
+
+    <string-array name="conversion">
+
+        <item>Celsius</item>
+        <item>Farenheit</item>
+        <item>Kelvin</item>
+    </string-array>
 </resources>
