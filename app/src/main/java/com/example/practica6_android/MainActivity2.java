@@ -76,9 +76,10 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 double valor = Double.parseDouble(texto);
                 Farenheit farenheit = new Farenheit(valor);
                 Celcius celcius = new Celcius(valor);
+
                 Celcius farencelcius= celcius.parse(farenheit);
 
-                resultado.setText(""+farencelcius.getValor());
+                resultado.setText(""+farencelcius.getValor()+" °"+celcius.getUnidad());
             }
             else if(seleccion1.equals("Farenheit")&&seleccion2.equals("Kelvin"))
             {
@@ -86,8 +87,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 Farenheit farenheit = new Farenheit(valor);
                 Kelvin kelvin = new Kelvin(valor);
                 Kelvin farenkelvin= kelvin.parse(farenheit);
-
-                resultado.setText(""+farenkelvin.getValor());
+                resultado.setText(""+farenkelvin.getValor()+" °"+kelvin.getUnidad());
             }
             else if(seleccion1.equals("Celsius")&&seleccion2.equals("Farenheit"))
             {
@@ -96,7 +96,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 Celcius celcius = new Celcius(valor);
                 Farenheit celciusfaren= farenheit.parse(celcius);
 
-                resultado.setText(""+celciusfaren.getValor());
+                resultado.setText(""+celciusfaren.getValor()+" °"+farenheit.getUnidad());
             }
             else if(seleccion1.equals("Celsius")&&seleccion2.equals("Kelvin"))
             {
@@ -105,7 +105,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 Kelvin kelvin = new Kelvin(valor);
                 Kelvin celciuskel= kelvin.parse(celcius);
 
-                resultado.setText(""+celciuskel.getValor());
+                resultado.setText(""+celciuskel.getValor()+" °"+kelvin.getUnidad());
             }
             else if(seleccion1.equals("Kelvin")&&seleccion2.equals("Farenheit"))
             {
@@ -115,7 +115,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 Farenheit farenheit = new Farenheit(valor);
                 Farenheit kelvinfaren= farenheit.parse(kelvin);
 
-                resultado.setText(""+kelvinfaren.getValor());
+                resultado.setText(""+kelvinfaren.getValor()+" °"+farenheit.getUnidad());
             }
 
             else if(seleccion1.equals("Kelvin")&&seleccion2.equals("Celsius"))
@@ -126,7 +126,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 Celcius celcius = new Celcius(valor);
                 Celcius kelvincelcius= celcius.parse(kelvin);
 
-                resultado.setText(""+kelvincelcius.getValor());
+                resultado.setText(""+kelvincelcius.getValor()+" °"+celcius.getUnidad());
             }
 
 
